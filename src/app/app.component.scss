@@ -13,6 +13,26 @@ $project: #242424;
   min-height: 100vh;
 }
 
+#page-up-arrow {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  border-radius: 100%;
+  background-color: $cyan-color;
+  box-shadow: 0 0 20px #000;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+
+  > button {
+    color: #111;
+  }
+}
+
+.avatar-image {
+  height: 100px;
+  border-radius: 100%;
+}
 ////////// Navigation //////////
 ///
 ///
@@ -125,6 +145,63 @@ mat-nav-list {
     }
   }
 }
+
+.arrow-scroll {
+  position: fixed;
+  bottom: 10rem;
+  left: 50%;
+  height: 4em;
+}
+
+@media screen and (max-width: 900px) {
+  .arrow-scroll {
+    bottom: 3rem;
+  }
+}
+
+.arrow {
+  border: solid $cyan-color;
+  border-width: 0 5px 5px 0;
+  display: inline-block;
+  padding: 7px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.delayed {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.arrow:nth-child(2) {
+  animation: arrow1 1.5s ease-in-out infinite;
+}
+
+.arrow:nth-child(3) {
+  animation: arrow2 1.5s ease-in-out infinite;
+}
+
+@keyframes arrow1 {
+  100% {
+    opacity: 0;
+    top: 100%;
+  }
+}
+
+@keyframes arrow2 {
+  100% {
+    opacity: 0;
+    top: 50%;
+  }
+}
+
 #hero {
   padding-bottom: 5rem;
   display: flex;
@@ -216,9 +293,11 @@ mat-nav-list {
 }
 
 #blob {
+  margin-top: 1.8rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   box-shadow: 0 0 20px #000;
   height: 200px;
   width: 200px;
@@ -279,7 +358,9 @@ mat-nav-list {
     grid-template-columns: repeat(2, 1fr) !important;
   }
 }
+
 #skills-container {
+  position: relative;
   padding-top: 5rem;
   padding-bottom: 5rem;
   text-align: center;
@@ -291,6 +372,7 @@ mat-nav-list {
   justify-content: space-evenly;
 
   > h3 {
+    margin-top: 3rem;
     font-family: $montserrat;
     text-transform: uppercase;
     font-weight: bold;
@@ -299,6 +381,14 @@ mat-nav-list {
       color: $cyan-color;
     }
   }
+}
+
+.image-container {
+  position: absolute;
+  top: -35px;
+  border-radius: 100%;
+  background-color: $cyan-color;
+  border: 15px solid $contact-background;
 }
 
 #skills {
@@ -339,7 +429,13 @@ mat-nav-list {
     width: 90%;
   }
 }
+
+.project-avatar {
+  border: 15px solid #101414;
+}
+
 #projects-container {
+  position: relative;
   min-height: 100vh;
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -360,6 +456,7 @@ mat-nav-list {
 }
 
 #projects-header {
+  margin-top: 3rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -516,7 +613,9 @@ i > a {
   }
 }
 #contact-container {
+  position: relative;
   padding-top: 5rem;
+  padding-bottom: 1rem;
   text-align: center;
   background-color: $contact-background;
   min-height: 100vh;
@@ -528,6 +627,7 @@ i > a {
 }
 
 #contact-header {
+  margin-top: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -575,4 +675,10 @@ textarea {
   > a {
     color: $cyan-color;
   }
+}
+
+#blob-avatar {
+  border: none !important;
+  background-color: transparent;
+  z-index: -1;
 }

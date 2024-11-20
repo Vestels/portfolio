@@ -1,7 +1,10 @@
 <div id="container">
+  <div id="page-up-arrow" *ngIf="isVisible" (click)="scrollToTop()">
+    <button mat-icon-button><mat-icon>keyboard_arrow_up</mat-icon></button>
+  </div>
   <nav id="nav-element">
     <div id="nav-logo">
-      <button id="home-button" (click)="scrollToElement('hero')">
+      <button id="home-button" (click)="scrollToElement('container')">
         <mat-icon>code</mat-icon>
       </button>
       <div id="logo-name">Roland</div>
@@ -23,6 +26,12 @@
     </div>
   </nav>
 
+  <div *ngIf="scrollIsVisible" class="arrow-scroll delayed">
+    <div class="arrow"></div>
+    <div class="arrow"></div>
+    <div class="arrow"></div>
+  </div>
+
   <div id="hero">
     <div id="hero-content-left" class="hidden" appObserve>
       <h1>Hi, I am <span>Roland.</span></h1>
@@ -42,9 +51,10 @@
         <span>Available for new projects</span>
       </div>
     </div>
+
     <div id="hero-cv-content" class="hidden" appObserve>
       <div id="blob">
-        <a href="/resume/rokszin_roland_cv_eng.pdf" download="">
+        <a href="/resume/rokszin_roland_cv_eng.pdf" download>
           <button mat-flat-button>
             Download CV <mat-icon>file_download</mat-icon>
           </button>
@@ -62,6 +72,9 @@
   </div>
 
   <div id="skills-container">
+    <div class="image-container hidden" appObserve>
+      <img class="avatar-image" src="/avatars/av5.png" alt="avatar" />
+    </div>
     <h3 class="hidden" appObserve><span>Skills</span> I am proficient in</h3>
     <div id="skills" class="hidden" appObserve>
       <div class="skill">
@@ -125,6 +138,9 @@
 
   <div id="projects-container">
     <div id="projects-header">
+      <div class="image-container hidden project-avatar" appObserve>
+        <img class="avatar-image" src="/avatars/av7.png" alt="avatar" />
+      </div>
       <h3 class="hidden" appObserve>My recent <span>Projects</span></h3>
       <p class="hidden" appObserve>
         I'm waiting for collaborations to bring projects to life, and yours
@@ -226,6 +242,9 @@
   <div></div>
 
   <div id="contact-container">
+    <div class="image-container hidden" appObserve>
+      <img class="avatar-image" src="/avatars/av3.png" alt="avatar" />
+    </div>
     <div id="contact-header" class="hidden" appObserve>
       <h3>Get in Touch</h3>
       <p>
@@ -290,7 +309,7 @@
       </button>
     </div>
     <span id="footer-section"
-      >&copy;2024 All rights reserved. Made by
+      >2024 &copy; Copyright
       <a href="https://github.com/Vestels" target="_blank">Vestels</a>.</span
     >
   </div>

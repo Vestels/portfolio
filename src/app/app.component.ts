@@ -1,28 +1,50 @@
-import {ChangeDetectionStrategy, Component, EventEmitter, Inject, inject, Output} from '@angular/core';
-import {FormControl, Validators} from '@angular/forms';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  EventEmitter,
+  HostListener,
+  Inject,
+  inject,
+  OnInit,
+  Output,
+} from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
 import {
   MatBottomSheet,
   MatBottomSheetRef,
 } from '@angular/material/bottom-sheet';
-import {MatListModule} from '@angular/material/list';
-import {MatButtonModule} from '@angular/material/button';
+import { MatListModule } from '@angular/material/list';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'portfolio';
   subjectInput: string = '';
   emailInput: string = '';
   messageInput: string = '';
+  isVisible = false;
+  scrollIsVisible = true;
 
   private _bottomSheet = inject(MatBottomSheet);
 
   constructor() {}
+
+  ngOnInit(): void {}
+
+  @HostListener('window:scroll', [])
+  onScroll(): void {
+    this.isVisible = window.scrollY > 400;
+    this.scrollIsVisible = window.scrollY < 50;
+  }
+
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 
   openBottomSheet(): void {
     const bottomSheetRef = this._bottomSheet.open(hamburger);
@@ -37,9 +59,15 @@ export class AppComponent {
     });
   }
 
-  readonly subject = new FormControl('', [Validators.required, Validators.minLength(3)]);
+  readonly subject = new FormControl('', [
+    Validators.required,
+    Validators.minLength(3),
+  ]);
   readonly email = new FormControl('', [Validators.required, Validators.email]);
-  readonly message = new FormControl('', [Validators.required, Validators.minLength(10)]);
+  readonly message = new FormControl('', [
+    Validators.required,
+    Validators.minLength(10),
+  ]);
 
   scrollToElement(elementId: string) {
     const target = document.getElementById(elementId);
@@ -47,10 +75,10 @@ export class AppComponent {
       const bodyRect = document.body.getBoundingClientRect().top;
       const elementRect = target.getBoundingClientRect().top;
       const scrollToPosition = elementRect - bodyRect;
-  
+
       window.scrollTo({
         top: scrollToPosition,
-        behavior: 'smooth'
+        behavior: 'smooth',
       });
     }
   }
@@ -63,10 +91,8 @@ export class AppComponent {
     const mailtoLink = `mailto:${email}?subject=${subject}&body=${message}`;
 
     window.location.href = mailtoLink;
-
   }
 }
-
 
 @Component({
   selector: 'hamburger',
@@ -78,7 +104,7 @@ export class AppComponent {
 export class hamburger {
   @Output() navigateToSection = new EventEmitter<string>();
 
-  constructor(private bottomSheetRef: MatBottomSheetRef<hamburger>) { }
+  constructor(private bottomSheetRef: MatBottomSheetRef<hamburger>) {}
   private _bottomSheetRef =
     inject<MatBottomSheetRef<hamburger>>(MatBottomSheetRef);
 
@@ -86,8 +112,4 @@ export class hamburger {
     this._bottomSheetRef.dismiss(id);
     event.preventDefault();
   }
-
-  // navigate(id: string): void {
-  //   this.bottomSheetRef.dismiss(id);
-  // }
 }
