@@ -373,6 +373,7 @@ mat-nav-list {
 
   > h3 {
     margin-top: 3rem;
+    margin-bottom: 3rem;
     font-family: $montserrat;
     text-transform: uppercase;
     font-weight: bold;
@@ -615,7 +616,7 @@ i > a {
 #contact-container {
   position: relative;
   padding-top: 5rem;
-  padding-bottom: 1rem;
+  padding-bottom: 10rem;
   text-align: center;
   background-color: $contact-background;
   min-height: 100vh;
@@ -670,11 +671,40 @@ textarea {
   resize: none;
 }
 
+#email {
+  opacity: 0.5;
+  margin: 0;
+  padding: 0;
+}
+
 #footer-section {
+  position: absolute;
+  bottom: 0.5rem;
+  z-index: 9999;
+  font-family: $montserrat;
   margin-top: 3rem;
-  > a {
+  > #author {
     color: $cyan-color;
   }
+}
+
+#footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: .5rem;
+  gap: .5rem;
+   > div {
+    display: flex;
+    gap: 1rem;
+
+    > a {
+      gap: .5rem;
+      color: white;
+      opacity: 0.5;
+  }
+   }
 }
 
 #blob-avatar {

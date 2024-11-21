@@ -13,6 +13,12 @@ body {
     "YOPQ" 300;
 }
 
+img {
+  pointer-events: none;
+  -webkit-user-drag: none;
+  -user-drag: none;
+}
+
 .hidden {
   opacity: 0;
   transform: translateY(20%);
