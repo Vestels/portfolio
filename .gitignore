@@ -2,6 +2,7 @@
 public/index.html
 .firebaserc
 firebase.json
+copy.scss
 # Compiled output
 /dist
 /tmp
