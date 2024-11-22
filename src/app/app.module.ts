@@ -17,12 +17,14 @@ import { ObserveDirective } from './observe.directive';
 import {
   MatBottomSheetModule
 } from '@angular/material/bottom-sheet';
+import { SnowComponent } from './snow/snow.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ObserveDirective
+    ObserveDirective,
+    SnowComponent
   ],
   imports: [
     BrowserModule,
