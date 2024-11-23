@@ -38,8 +38,9 @@ export class SnowComponent implements AfterViewInit, OnDestroy {
     this.snowflakes = Array.from({ length: count }, () => ({
       x: Math.random() * window.innerWidth,
       y: Math.random() * window.innerHeight,
-      r: Math.random() * 2 + 0.5,
-      d: Math.random() * 0.5 + 0.2
+      r: Math.random() * 0.5 + 0.5,
+      d: Math.random() * 2 + 0.2,
+      moveSideways: Math.random() < 0.3
     }));
   }
   
@@ -58,8 +59,11 @@ export class SnowComponent implements AfterViewInit, OnDestroy {
 
   private updateSnowflakes() {
     for (const flake of this.snowflakes) {
-      flake.y += Math.pow(flake.d, 2) + 0.5;
-      flake.x += Math.sin(flake.y / 50) * 1.5;
+      flake.y += Math.pow(flake.d, 1) + 0.5;
+  
+      if (flake.moveSideways) {
+        flake.x += Math.sin(flake.y / 100) * 1.5;
+      }
   
       if (flake.y > this.canvas.height) {
         flake.y = -flake.r;
