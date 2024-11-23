@@ -225,7 +225,6 @@ mat-nav-list {
 
 .bottom-element {
   margin: 0.3rem;
-  margin-left: 1rem;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -449,7 +448,7 @@ i > a {
   flex-direction: column;
   align-items: start;
   justify-content: space-between;
-  height: 600px;
+  min-height: 600px;
   width: 50%;
   background-color: #1c1f1f;
 }
@@ -459,12 +458,32 @@ i > a {
   align-items: center;
   justify-content: center;
   background: url("/images/webp3.png");
-  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   background-color: #1c1f1f;
-  height: 50%;
+  height: 300px;
   width: 100%;
+}
+
+#bookapi {
+  background: url("/projects/bookapi.png");
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#json-dummy-cards {
+  background: url("/projects/cards.png");
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#todo {
+  background: url("/projects/todo.png");
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 @keyframes fadeIn {
@@ -490,7 +509,6 @@ i > a {
 }
 
 .project-informations {
-  width: 100%;
   display: none;
   background-color: rgba(16, 20, 20, 0.5);
   transition: all 0.3s ease-in-out;
@@ -503,14 +521,14 @@ i > a {
 .project-informations > p {
   font-family: "Montserrat", sans-serif;
 }
-.project-informations > button > mat-icon {
+.project-informations > button > a > mat-icon {
   color: #04dcdc;
 }
 
 .project-image-container:hover .project-informations {
   animation: fadeIn 0.5s ease 0s 1 normal forwards;
   transform: scale(1.5);
-  height: 100%;
+  height: 300px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -524,15 +542,28 @@ i > a {
   animation: fadeIn 1s ease 0s 1 normal reverse;
 }
 
-.example-header-image {
-  background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
+.card-pfp {
+  background-color: #04dcdc;
+  background-image: url("/avatars/avatar.png");
   background-size: cover;
 }
 
-.example-card {
+mat-card-title {
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: #04dcdc;
+}
+
+mat-card-subtitle {
+  opacity: 0.5;
+}
+
+.project-card {
   display: flex;
-  justify-content: space-evenly;
-  height: 50%;
+  justify-content: start;
+  gap: 1rem;
+  min-height: 300px;
   border-radius: 0;
 }
 
