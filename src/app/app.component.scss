@@ -1,5 +1,10 @@
+$main-color: #07a5a5;
+$text-color: #fff;
+$secondary-container: #1c1f1f;
+
 #container {
   min-height: 100vh;
+  width: 100%;
 }
 
 #page-up-arrow {
@@ -8,13 +13,13 @@
   right: 20px;
   z-index: 999;
   border-radius: 100%;
-  background-color: #04dcdc;
-  box-shadow: 0 0 20px #000;
+  background-color: $main-color;
   transition: opacity 0.3s ease;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   cursor: pointer;
 }
 #page-up-arrow > button {
-  color: #111;
+  color: $text-color;
 }
 
 .avatar-image {
@@ -31,8 +36,8 @@
   }
   #nav-element {
     justify-content: space-between !important;
-    padding-left: 2rem !important;
-    padding-right: 2rem !important;
+    // padding-left: 2rem !important;
+    // padding-right: 2rem !important;
   }
 }
 
@@ -46,8 +51,8 @@
   align-items: center;
   justify-content: space-evenly;
   padding: 1rem;
-  background-color: rgba(16, 20, 20, 0.5);
-  backdrop-filter: blur(2px);
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
   width: 100%;
 }
 
@@ -61,13 +66,12 @@
   font-size: 20px;
 }
 #nav-logo > span {
-  color: #04dcdc;
   font-weight: 700;
 }
 
 #home-button {
   display: flex;
-  color: #04dcdc;
+  color: $main-color;
   background: transparent;
   border: none;
   outline: none;
@@ -81,6 +85,7 @@
 }
 
 #nav-buttons > button {
+  color: $main-color;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   letter-spacing: 5px;
@@ -93,6 +98,10 @@ mat-nav-list {
   padding-top: 3rem;
   padding-bottom: 3rem;
   gap: 2rem;
+
+  button {
+    color: $main-color;
+  }
 }
 
 .nav-list-button {
@@ -121,6 +130,10 @@ mat-nav-list {
     display: flex;
     flex-direction: column;
   }
+
+  #hero-content-left > p {
+    font-size: .8rem;
+  }
 }
 
 .arrow-scroll {
@@ -137,7 +150,7 @@ mat-nav-list {
 }
 
 .arrow {
-  border: solid #04dcdc;
+  border: solid $main-color;
   border-width: 0 5px 5px 0;
   display: inline-block;
   padding: 7px;
@@ -181,6 +194,7 @@ mat-nav-list {
 }
 
 #hero {
+  position: relative;
   padding-bottom: 5rem;
   display: flex;
   justify-content: center;
@@ -204,7 +218,7 @@ mat-nav-list {
   font-weight: bold;
 }
 #hero-content-left > h1 > span {
-  color: #04dcdc;
+  color: $main-color;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
 }
@@ -250,30 +264,30 @@ mat-nav-list {
   color: #04dcdc;
 }
 
-.pulse {
-  background: #00f05c;
-  border-radius: 50%;
-  height: 18px;
-  width: 18px;
-  box-shadow: 0 0 0 0 black;
-  transform: scale(1);
-  animation: pulse 2s infinite;
-}
+// .pulse {
+//   background: #00f05c;
+//   border-radius: 50%;
+//   height: 18px;
+//   width: 18px;
+//   box-shadow: 0 0 0 0 black;
+//   transform: scale(1);
+//   animation: pulse 2s infinite;
+// }
 
-@keyframes pulse {
-  0% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(80, 248, 74, 0.7);
-  }
-  70% {
-    transform: scale(1);
-    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
-  }
-  100% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-  }
-}
+// @keyframes pulse {
+//   0% {
+//     transform: scale(0.95);
+//     box-shadow: 0 0 0 0 rgba(80, 248, 74, 0.7);
+//   }
+//   70% {
+//     transform: scale(1);
+//     box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+//   }
+//   100% {
+//     transform: scale(0.95);
+//     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+//   }
+// }
 
 #hero-cv-content {
   display: flex;
@@ -291,18 +305,22 @@ mat-nav-list {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  box-shadow: 0 0 20px #000;
+  // box-shadow: 0 0 20px #000;
   height: 200px;
   width: 200px;
-  background-color: #04dcdc;
+  background-color: $main-color;
   border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
   animation: liquid 5s ease-in-out infinite;
+
+  button {
+    background-color: $main-color;
+    color: #fff;
+  }
 }
 
 #hero-avatar {
   position: absolute;
   width: 100%;
-  // margin-top: 2rem;
 }
 
 @keyframes liquid {
@@ -328,7 +346,8 @@ mat-nav-list {
   gap: 2rem;
 }
 #hero-socials > a {
-  color: #a7a7a7;
+  color: #000;
+  opacity: .6;
   transition: all 0.3s ease-in-out;
 }
 #hero-socials > a:hover {
@@ -353,15 +372,17 @@ mat-nav-list {
 
 #skills-container {
   position: relative;
+  z-index: 1;
   padding-top: 5rem;
   padding-bottom: 5rem;
   text-align: center;
-  background-color: #1c1f1f;
+  background-color: $secondary-container;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  color: $text-color;
 }
 #skills-container > h3 {
   margin-top: 3rem;
@@ -371,15 +392,19 @@ mat-nav-list {
   font-weight: bold;
 }
 #skills-container > h3 > span {
-  color: #04dcdc;
+  color: $main-color;
 }
 
 .image-container {
   position: absolute;
   top: -35px;
   border-radius: 100%;
-  background-color: #04dcdc;
-  border: 15px solid #1c1f1f;
+  background-color: $main-color;
+  border: 15px solid $secondary-container;
+}
+
+.image-container > img {
+  filter: invert(100%);
 }
 
 #skills {
@@ -417,18 +442,19 @@ mat-nav-list {
 }
 
 .project-avatar {
-  border: 15px solid #101414;
+  @extend .image-container;
 }
 
 #projects-container {
   position: relative;
   min-height: 100vh;
   padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-bottom: 8rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  background-color: #fff;
 }
 #projects-container > h3 {
   font-family: "Montserrat", sans-serif;
@@ -436,7 +462,7 @@ mat-nav-list {
   font-weight: bold;
 }
 #projects-container > h3 > span {
-  color: #04dcdc;
+  color: $main-color;
 }
 
 #projects-header {
@@ -453,14 +479,14 @@ mat-nav-list {
   font-weight: bold;
 }
 #projects-header > h3 > span {
-  color: #04dcdc;
+  color: $main-color;
 }
 #projects-header > p {
   font-family: "Montserrat", sans-serif;
 }
 
 i > a {
-  color: #04dcdc;
+  color: $main-color;
 }
 
 #projects-content {
@@ -478,8 +504,8 @@ i > a {
   align-items: start;
   justify-content: space-between;
   min-height: 600px;
-  width: 50%;
-  background-color: #1c1f1f;
+  width: 100%;
+  background-color: #fff;
 }
 
 .project-image-container {
@@ -490,7 +516,8 @@ i > a {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  background-color: #1c1f1f;
+  background-color: $secondary-container;
+  color: $text-color;
   height: 300px;
   width: 100%;
 }
@@ -519,7 +546,7 @@ i > a {
 
 .project-informations {
   display: none;
-  background-color: rgba(16, 20, 20, 0.5);
+  background-color: rgba(16, 20, 20, 0.3);
   transition: all 0.3s ease-in-out;
 }
 .project-informations > h5 {
@@ -531,11 +558,11 @@ i > a {
   font-family: "Montserrat", sans-serif;
 }
 .project-informations > button > mat-icon {
-  color: #04dcdc;
+  color: $main-color;
 }
 
 .project-image-container:hover .project-informations {
-  animation: fadeIn 0.5s ease 0s 1 normal forwards;
+  animation: fadeIn 0.3s ease 0s 1 normal forwards;
   transform: scale(1.5);
   height: 300px;
   width: 100%;
@@ -552,7 +579,7 @@ i > a {
 }
 
 .card-pfp {
-  background-color: #04dcdc;
+  background-color: $main-color;
   background-image: url("/avatars/avatar.png");
   background-size: cover;
 }
@@ -561,11 +588,7 @@ mat-card-title {
   font-weight: bold;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
-  color: #04dcdc;
-}
-
-mat-card-subtitle {
-  opacity: 0.5;
+  // color: $main-color;
 }
 
 .project-card {
@@ -573,7 +596,8 @@ mat-card-subtitle {
   justify-content: start;
   gap: 1rem;
   min-height: 300px;
-  border-radius: 0;
+  border-radius: 0 0 1rem 1rem;
+  background-color: #fff;
 }
 
 @media screen and (max-width: 1210px) {
@@ -592,6 +616,9 @@ mat-card-subtitle {
   #contact-header {
     width: 90%;
   }
+  #footer-links {
+    flex-direction: column;
+  }
 }
 
 #contact-container {
@@ -599,13 +626,14 @@ mat-card-subtitle {
   padding-top: 5rem;
   padding-bottom: 10rem;
   text-align: center;
-  background-color: #1c1f1f;
+  background-color: $secondary-container;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   gap: 2rem;
+  color: $text-color;
 }
 
 #contact-header {
@@ -621,7 +649,7 @@ mat-card-subtitle {
   font-weight: bold;
 }
 #contact-header > p > span {
-  color: #04dcdc;
+  color: $main-color;
   font-weight: bold;
 }
 
@@ -632,9 +660,14 @@ mat-card-subtitle {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  margin-bottom: 5rem;
 }
 #form-content > mat-form-field {
   width: 30%;
+}
+#form-content > button {
+  background-color: $main-color;
+  color: $text-color;
 }
 #form-content > img {
   position: fixed;
@@ -657,10 +690,9 @@ textarea {
   bottom: 0.5rem;
   z-index: 1;
   font-family: "Montserrat", sans-serif;
-  margin-top: 3rem;
 }
 #footer-section > #author {
-  color: #04dcdc;
+  color: $main-color;
 }
 
 #footer-links {
@@ -677,7 +709,7 @@ textarea {
 }
 #footer-links > div > a {
   gap: 0.5rem;
-  color: white;
+  color: #fff;
   opacity: 0.5;
 }
 
