@@ -36,15 +36,13 @@ $secondary-container: #1c1f1f;
   }
   #nav-element {
     justify-content: space-between !important;
-    // padding-left: 2rem !important;
-    // padding-right: 2rem !important;
   }
 }
 
 #nav-element {
   height: 70px;
-  position: fixed;
-  z-index: 2;
+  position: sticky;
+  z-index: 999;
   top: 0;
   overflow: hidden;
   display: flex;
@@ -264,31 +262,6 @@ mat-nav-list {
   color: #04dcdc;
 }
 
-// .pulse {
-//   background: #00f05c;
-//   border-radius: 50%;
-//   height: 18px;
-//   width: 18px;
-//   box-shadow: 0 0 0 0 black;
-//   transform: scale(1);
-//   animation: pulse 2s infinite;
-// }
-
-// @keyframes pulse {
-//   0% {
-//     transform: scale(0.95);
-//     box-shadow: 0 0 0 0 rgba(80, 248, 74, 0.7);
-//   }
-//   70% {
-//     transform: scale(1);
-//     box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
-//   }
-//   100% {
-//     transform: scale(0.95);
-//     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-//   }
-// }
-
 #hero-cv-content {
   display: flex;
   flex-direction: column;
@@ -305,7 +278,6 @@ mat-nav-list {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  // box-shadow: 0 0 20px #000;
   height: 200px;
   width: 200px;
   background-color: $main-color;
