@@ -6,11 +6,11 @@ import { ImpressumComponent } from './impressum/impressum.component';
 import { TermsComponent } from './terms/terms.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'privacy-policy', component: PrivacypolicyComponent },
-  { path: 'impressum', component: ImpressumComponent },
-  { path: 'terms-and-conditions', component: TermsComponent },
-  { path: '**', redirectTo: '', pathMatch: 'full' },
+  { path: 'weboldal-keszites', component: HomeComponent },
+  { path: 'weboldal-keszites/privacy-policy', component: PrivacypolicyComponent },
+  { path: 'weboldal-keszites/impressum', component: ImpressumComponent },
+  { path: 'weboldal-keszites/terms-and-conditions', component: TermsComponent },
+  { path: '**', redirectTo: 'weboldal-keszites', pathMatch: 'full' },
 ];
 
 @NgModule({

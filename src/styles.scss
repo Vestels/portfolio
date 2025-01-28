@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html,
 body {
   height: 100%;
@@ -5,6 +11,8 @@ body {
 }
 body {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: "Kumbh Sans", sans-serif !important;
   font-optical-sizing: auto;
   font-style: normal;
@@ -32,7 +40,7 @@ img {
 
 .hidden {
   opacity: 0;
-  transform: translateY(15%);
+  transform: translateY(30%);
   transition: all 1s ease;
 }
 

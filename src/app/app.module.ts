@@ -45,6 +45,7 @@ import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
     ReactiveFormsModule,
     MatCardModule,
     MatBottomSheetModule,
+    ReactiveFormsModule.withConfig({warnOnNgModelWithFormControl: 'never'})
   ],
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],

@@ -23,11 +23,11 @@ $secondary-container: #1c1f1f;
 }
 
 .avatar-image {
-  height: 100px;
+  height: 180px;
   border-radius: 100%;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1000px) {
   #hamburger-menu {
     display: flex !important;
   }
@@ -123,20 +123,20 @@ mat-nav-list {
   }
 }
 
-@media screen and (max-width: 545px) {
+@media screen and (max-width: 650px) {
   #hero-content-left > h1 {
     display: flex;
     flex-direction: column;
   }
 
   #hero-content-left > p {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 }
 
 .arrow-scroll {
   position: fixed;
-  bottom: 10rem;
+  bottom: 8rem;
   left: 50%;
   height: 4em;
 }
@@ -193,11 +193,12 @@ mat-nav-list {
 
 #hero {
   position: relative;
-  padding-bottom: 5rem;
+  padding-bottom: 6rem;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 #hero-content-left {
@@ -255,7 +256,7 @@ mat-nav-list {
   background-color: rgba(16, 20, 20, 0.5);
   display: flex;
   align-items: center;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 .bottom-element > mat-icon {
@@ -277,16 +278,15 @@ mat-nav-list {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   height: 200px;
   width: 200px;
   background-color: $main-color;
   border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
   animation: liquid 5s ease-in-out infinite;
 
-  button {
-    background-color: $main-color;
-    color: #fff;
+  img {
+    width: 500px;
+    margin-bottom: 3rem;
   }
 }
 
@@ -313,13 +313,13 @@ mat-nav-list {
 #hero-socials {
   display: flex;
   position: absolute;
-  bottom: 5rem;
+  bottom: 8rem;
   justify-content: space-between;
   gap: 2rem;
 }
 #hero-socials > a {
   color: #000;
-  opacity: .6;
+  opacity: 0.6;
   transition: all 0.3s ease-in-out;
 }
 #hero-socials > a:hover {
@@ -329,16 +329,6 @@ mat-nav-list {
 @media screen and (max-width: 785px) {
   #skills-container > h3 {
     width: 90%;
-  }
-  #skills {
-    margin-top: 3rem;
-    grid-template-columns: repeat(3, 1fr) !important;
-  }
-}
-
-@media screen and (max-width: 455px) {
-  #skills {
-    grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 
@@ -367,35 +357,71 @@ mat-nav-list {
   color: $main-color;
 }
 
+.services {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 3rem;
+  padding-top: 5rem;
+  overflow: hidden;
+}
+
+.service {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  gap: 2rem;
+  flex: 1 1 700px;
+
+  @media screen and (max-width: 400px) {
+    flex-direction: column;
+
+    div {
+      width: 90% !important;
+    }
+  }
+
+  img {
+    width: 100px;
+    filter: invert(100%);
+    user-select: none;
+  }
+
+  div {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-evenly;
+    text-align: start;
+
+    h5 {
+      width: 100% !important;
+      height: auto;
+      color: $main-color;
+    }
+  }
+}
+
 .image-container {
   position: absolute;
-  top: -35px;
+  top: -60px;
   border-radius: 100%;
   background-color: $main-color;
   border: 15px solid $secondary-container;
-}
-
-.image-container > img {
-  filter: invert(100%);
-}
-
-#skills {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 2rem;
-}
-
-.skill {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
-}
-.skill > img {
-  height: 100px;
-}
-.skill > span {
-  font-size: 20px;
+  justify-content: center;
 }
 
 @media screen and (max-width: 902px) {
@@ -427,6 +453,7 @@ mat-nav-list {
   align-items: center;
   justify-content: space-evenly;
   background-color: #fff;
+  overflow: hidden;
 }
 #projects-container > h3 {
   font-family: "Montserrat", sans-serif;
@@ -463,10 +490,12 @@ i > a {
 
 #projects-content {
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: space-around;
   gap: 3rem;
   width: 90%;
+  height: 100%;
+  flex-wrap: wrap;
 }
 
 .project {
@@ -475,16 +504,22 @@ i > a {
   flex-direction: column;
   align-items: start;
   justify-content: space-between;
-  min-height: 600px;
+  max-height: 100%;
   width: 100%;
   background-color: #fff;
+  border-radius: 0 0 1rem 1rem;
+  flex: 1 1 300px;
+}
+
+mat-card {
+  height: auto !important;
 }
 
 .project-image-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url("/images/webp3.png");
+  background: url("/images/landing-page.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -620,6 +655,10 @@ mat-card-title {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   font-weight: bold;
+
+  span {
+    color: $main-color;
+  }
 }
 #contact-header > p > span {
   color: $main-color;
@@ -633,7 +672,7 @@ mat-card-title {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 5rem;
+  margin-bottom: 10rem;
 }
 #form-content > mat-form-field {
   width: 30%;
