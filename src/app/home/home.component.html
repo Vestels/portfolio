@@ -2,10 +2,22 @@
 <!-- <app-snow></app-snow> -->
 
 <div id="container">
+
+
+  <!-- <div class="contact-top">
+    <span class="d-flex w-100 mx-1 mx-lg-5 flex-column flex-sm-row gap-1 gap-sm-5 p-2">
+      <a href="tel:+36205175645"><mat-icon>call</mat-icon>+36 20 / 517- 5645</a>
+      <a href="mailto:rokszinroland@gmail.com"><mat-icon>alternate_email</mat-icon>rokszinroland&#64;gmail.com</a>
+    </span>
+    <div></div>
+  </div> -->
+
+  <!-- To Page up button -->
   <div id="page-up-arrow" *ngIf="isVisible" (click)="scrollToTop()">
     <button mat-icon-button><mat-icon>keyboard_arrow_up</mat-icon></button>
   </div>
 
+  <!-- Navigation -->
   <nav id="nav-element">
     <div id="nav-logo">
       <button id="home-button" (click)="scrollToElement('container')">
@@ -14,11 +26,11 @@
       <div id="logo-name">Roland</div>
     </div>
     <div id="nav-buttons">
-      <button mat-button (click)="scrollToElement('hero')">Rólam</button>
-      <button mat-button (click)="scrollToElement('skills-id')">
+      <button mat-button (click)="scrollToElement('hero')">Hogy miért?</button>
+      <button mat-button (click)="scrollToElement('services-id')">
         Szolgáltatások
       </button>
-      <button mat-button (click)="scrollToElement('projects-id')">
+      <button mat-button (click)="scrollToElement('reference-id')">
         Referenciák
       </button>
       <button mat-button (click)="scrollToElement('contact-id')">
@@ -30,35 +42,42 @@
     </div>
   </nav>
 
+
+
+
+  <!-- Scrollable feedback -->
   <div *ngIf="scrollIsVisible" class="arrow-scroll delayed">
     <div class="arrow"></div>
     <div class="arrow"></div>
     <div class="arrow"></div>
   </div>
 
+
+
+
+  <!-- Hero section -->
   <div id="hero">
     
     <div id="hero-content-left">
       <h1 class="from-left" appObserve>
-        Üdv, <span>Roland</span>vagyok.
+        Professzionális Weboldalak
       </h1>
-      <h3 class="from-left" appObserve>Fullstack Developer.</h3>
-      <p class="hidden" appObserve>
-        A célom, hogy segítsek neked egy olyan online jelenlétet létrehozni,
-        amely igazán tükrözi a vállalkozásodat vagy ötletedet, és amely
-        hatékonyan kommunikál a célcsoportoddal. <br />
-        <br />A weboldal nemcsak egy digitális névjegykártya, hanem egy
-        erőteljes eszköz is, amellyel kapcsolatba léphetsz a közönségeddel, és
-        bizalmat építhetsz ki. Éppen ezért fontos, hogy a weboldalad ne csak
-        esztétikus legyen, hanem jól működjön minden eszközön és minden
-        helyzetben. <br>
-        <br> Legyen szó egyszerű bemutatkozó oldalról vagy komplex,
-        dinamikus alkalmazásokról, az én célom, hogy a legmagasabb minőségben és a
-        legjobb megoldásokkal támogassam a sikered.
-      </p>
+      <h2 class="from-left" appObserve>Egyedi Megoldások</h2>
+      <h3 class="from-left" appObserve>Modern Technológiás Weboldal készítés</h3>
+      <div class="hero-list">
+        <div class="list-element hidden" appObserve>
+          <mat-icon>fingerprint</mat-icon><strong>Hiteles online jelenlét</strong> – Egy professzionális weboldal erősíti a márkád hitelességét, bizalmat épít, és versenyelőnyt biztosít a digitális térben.
+        </div>
+        <div class="list-element hidden" appObserve>
+          <mat-icon>trending_up</mat-icon><strong>Marketing és növekedési lehetőségek</strong> – A keresőoptimalizálás (SEO) és a digitális marketing eszközeivel új ügyfelekhez juthatsz, növelheted láthatóságodat és hosszú távon is skálázhatod vállalkozásodat.
+        </div>
+        <div class="list-element hidden" appObserve>
+          <mat-icon>speed</mat-icon><strong>Modern technológiák és optimalizált teljesítmény</strong> – Reszponzív, gyors és biztonságos weboldalak a legújabb fejlesztési eszközökkel, hogy mindig naprakész és versenyképes maradj.
+        </div>
+      </div>
     </div>
 
-    <div id="hero-cv-content" class="from-right" appObserve>
+    <div id="hero-content-right" class="from-right" appObserve>
       <div id="blob">
         <img src="/images/coding.png" alt="developer">
       </div>
@@ -78,205 +97,177 @@
 
   </div>
 
-  <div id="skills-id"></div>
 
-  <div id="skills-container">
+
+
+  <!-- Services Section -->
+  <div id="services-id"></div>
+
+  <div id="services-container">
 
     <div class="image-container">
       <img class="avatar-image" src="/images/helping.png" alt="skills-icon" />
     </div>
 
-    <h3 class="hidden" appObserve><span>Ezekben</span> leszek segítségedre</h3>
+    <!-- <h3>Teljeskörű <span>Szolgáltatások</span></h3> -->
 
+    <!-- Services -->
     <div class="services">
-
       <div class="service from-left" appObserve>
-        <img src="/services/menu.png" alt="menu">
-        <div>
-          <h5>Egyszerű landing page-ek készítése</h5>
-          <p>Célorientált, letisztult oldalak, amelyek hatékonyan mutatják be a termékeket vagy szolgáltatásokat, és segítik az ügyfelek megszerzését.</p>
+        <div class="img-container">
+          <img src="/services/web.png" alt="web">
         </div>
-      </div>
-      <div class="service from-right" appObserve>
-        <img src="/services/building.png" alt="building">
-        <div>
-          <h5>Kisebb bemutatkozó oldalak, portfóliók</h5>
-          <p>Személyes vagy vállalati profiloldalak, amelyek professzionálisan mutatják be a munkáidat, szolgáltatásaidat és értékeidet.</p>
-        </div>
-      </div>
-      <div class="service from-left" appObserve>
-        <img src="/services/web.png" alt="web">
-        <div>
-          <h5>Statikus weboldalak szolgáltatások bemutatására</h5>
+        <article>
+          <h5>Statikus vagy Dinamikus weboldalak</h5>
           <p>Gyorsan betöltődő, stabil oldalak, amelyek részletesen ismertetik a kínált szolgáltatásokat, egyszerű navigációval és modern dizájnnal.</p>
-        </div>
+        </article>
       </div>
       <div class="service from-right" appObserve>
-        <img src="/services/painting-tools.png" alt="painting-tools">
-        <div>
+        <div class="img-container">
+          <img src="/services/creative-process.png" alt="Creative Process">
+        </div>
+        <article>
           <h5>Egyedi weboldal készítés</h5>
           <p>Teljesen testreszabott weboldalak, amelyek tökéletesen illeszkednek az igényeidhez és céljaidhoz, modern megjelenéssel és funkcionalitással.</p>
-        </div>
+        </article>
       </div>
       <div class="service from-left" appObserve>
-        <img src="/services/seo.png" alt="SEO">
-        <div>
+        <div class="img-container">
+          <img src="/services/seo.png" alt="SEO">
+        </div>
+        <article>
           <h5>SEO optimalizálás</h5>
           <p>A weboldalad keresőmotor-barát kialakítása, hogy könnyebben megtalálható legyen a Google-ben és más keresőkben, ezzel növelve a látogatók számát.</p>
-        </div>
+        </article>
       </div>
       <div class="service from-right" appObserve>
-        <img src="/services/responsive.png" alt="Responsive">
-        <div>
+        <div class="img-container">
+          <img src="/services/responsive.png" alt="Responsive">
+        </div>
+        <article>
           <h5>Mobiloptimalizált design</h5>
           <p>Reszponzív weboldalak, amelyek minden eszközön (telefonon, tableten és asztali gépen) tökéletes élményt nyújtanak a felhasználóknak.</p>
-        </div>
+        </article>
       </div>
       <div class="service from-left" appObserve>
-        <img src="/services/maintenance.png" alt="Maintenance">
-        <div>
+        <div class="img-container">
+          <img src="/services/maintenance.png" alt="Maintenance">
+        </div>
+        <article>
           <h5>Karbantartás és frissítés</h5>
           <p>Rendszeres frissítések és hibajavítások, hogy a weboldalad mindig naprakész és biztonságos legyen.</p>
-        </div>
+        </article>
       </div>
       <div class="service from-right" appObserve>
-        <img src="/services/creative-process.png" alt="Creative-process">
-        <div>
-          <h5>Egyedi funkciók fejlesztése</h5>
-          <p>Speciális igényekre szabott megoldások, mint például űrlapok, időpontfoglaló rendszerek vagy interaktív elemek fejlesztése.</p>
+        <div class="img-container">
+          <img src="/services/pie-chart.png" alt="Pie Chart">
         </div>
+        <article>
+          <h5>Integrált Analitika</h5>
+          <p>Részletes látogatói statisztikák és felhasználói viselkedés elemzése, amelyek segítenek optimalizálni a weboldalt. Látogatók száma, forgalmi források, legnépszerűbb oldalak és interakciók nyomon követése a jobb felhasználói élmény érdekében.</p>
+        </article>
       </div>
-      <div class="service hidden" appObserve>
-        <img src="/services/data-server.png" alt="Data-server">
-        <div>
+      <div class="service from-left" appObserve>
+        <div class="img-container">
+          <img src="/services/data-server.png" alt="Data Server">
+        </div>
+        <article>
           <h5>Tárhely és domain ügyintézés</h5>
           <p>Teljes körű támogatás a domain név regisztrációban és a tárhely kiválasztásában, hogy minden technikai részlet gördülékenyen megoldódjon.</p>
-        </div>
+        </article>
       </div>
-      
-    </div>
-
-  </div>
-
-  <div id="projects-id"></div>
-
-  <div id="projects-container">
-    <div id="projects-header">
-      <h3 class="from-left" appObserve>Pár kiemelt <span>Projektem</span></h3>
-      <p class="hidden" appObserve>
-        Nyitott vagyok új együttműködésekre, hogy közösen valósíthassunk meg izgalmas projekteket!
-      </p>
-      <p class="hidden" appObserve>
-        <i
-          >A személyes projektekért kérlek látogasd meg a
-          <a href="https://github.com/Vestels" target="_blank"
-            ><i class="bi bi-github"></i></a
-        ></i>
-      </p>
-    </div>
-
-    <div id="projects-content">
-      <div class="project hidden" appObserve>
-        <div class="project-image-container">
-          <div class="project-informations">
-            <h5>A projekt neve</h5>
-            <p>A projekt leírása.</p>
-            <button mat-icon-button>
-              <mat-icon>open_in_new</mat-icon>
-            </button>
-          </div>
+      <div class="service from-right" appObserve>
+        <div class="img-container">
+          <img src="/services/technology.png" alt="Technology">
         </div>
-        <mat-card class="project-card" appearance="raised">
-          <mat-card-header>
-            <div mat-card-avatar class="card-pfp"></div>
-            <mat-card-title>Roland</mat-card-title>
-            <mat-card-subtitle>Fullstack Developer</mat-card-subtitle>
-          </mat-card-header>
-          <mat-card-content>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi
-              officiis, rem quo amet vitae sequi adipisci aliquid? Eos facilis
-              natus, eaque ad quisquam laborum exercitationem aliquid ea
-              voluptatibus iusto rem officiis perspiciatis sint modi quas
-              ratione nobis omnis, dolor dicta recusandae reiciendis magni
-              maxime numquam.
-            </p>
-          </mat-card-content>
-        </mat-card>
-      </div>
-
-      <div class="project hidden" appObserve>
-        <div class="project-image-container">
-          <div class="project-informations">
-            <h5>A projekt neve</h5>
-            <p>A projekt leírása.</p>
-            <button mat-icon-button>
-              <mat-icon>open_in_new</mat-icon>
-            </button>
-          </div>
-        </div>
-        <mat-card class="project-card" appearance="raised">
-          <mat-card-header>
-            <div mat-card-avatar class="card-pfp"></div>
-            <mat-card-title>Roland</mat-card-title>
-            <mat-card-subtitle>Fullstack Developer</mat-card-subtitle>
-          </mat-card-header>
-          <mat-card-content>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet,
-              sed mollitia quas laudantium laborum nihil eveniet tempora ad?
-              Nemo, neque nobis ad veniam aperiam alias illum sunt suscipit
-              laborum ipsa ducimus, similique possimus debitis aliquam ipsam
-              assumenda tempore hic beatae voluptate voluptatum fugiat
-              accusamus? Labore quibusdam ex doloremque laborum omnis, ad
-              perferendis impedit! Adipisci sequi id consequatur dolorum,
-              excepturi aspernatur!
-            </p>
-          </mat-card-content>
-        </mat-card>
-      </div>
-
-      <div class="project hidden" appObserve>
-        <div class="project-image-container" id="todo">
-          <div class="project-informations">
-            <h5>A projekt neve</h5>
-            <p>A projekt leírása.</p>
-            <button mat-icon-button>
-              <mat-icon>open_in_new</mat-icon>
-            </button>
-          </div>
-        </div>
-        <mat-card class="project-card" appearance="raised">
-          <mat-card-header>
-            <div mat-card-avatar class="card-pfp"></div>
-            <mat-card-title>Roland</mat-card-title>
-            <mat-card-subtitle>Fullstack Developer</mat-card-subtitle>
-          </mat-card-header>
-          <mat-card-content>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
-              distinctio obcaecati repellat magni ab ipsa necessitatibus aliquam
-              consequatur maiores iste incidunt iusto blanditiis, ratione natus
-              recusandae hic tempora fugit illo alias ad perferendis, eveniet
-              assumenda, delectus voluptatem? Reiciendis repudiandae inventore
-              modi commodi iste soluta fuga, nobis pariatur cum nisi amet?
-            </p>
-          </mat-card-content>
-        </mat-card>
+        <article>
+          <h5>Egyszerű kezelhetőség és szerkesztési lehetőség</h5>
+          <p>Modern, felhasználóbarát kezelőfelületet biztosítok, amely lehetővé teszi, hogy könnyedén frissítsd és szerkeszd weboldalad tartalmát később is, fejlesztői tudás nélkül.</p>
+        </article>
       </div>
     </div>
   </div>
 
+
+
+
+  <!-- References Section -->
+  <div id="reference-id"></div>
+
+  <div id="reference-container">
+    <div class="reference-content">
+      <div class="reference from-left" appObserve>
+        <img src="/projects/mockup.png" alt="Website Mockup">
+        <div class="reference-description">
+          <div class="box-shadow">
+            <h5>Weboldal neve</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus amet odit provident temporibus nostrum illo laborum, quas deserunt assumenda similique natus, voluptatem commodi voluptatum distinctio consequatur inventore, ex beatae veniam sint error nam. Alias eos autem culpa incidunt at accusamus vero veritatis odio? Maiores consequatur eius totam soluta corporis fugiat!</p>
+            <button>Tovább az oldalra<mat-icon>desktop_windows</mat-icon></button>
+          </div>
+        </div>
+      </div>
+      <div class="reference from-right" appObserve>
+        <div class="reference-description">
+          <div class="box-shadow">
+            <h5>Weboldal neve</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus amet odit provident temporibus nostrum illo laborum, quas deserunt assumenda similique natus, voluptatem commodi voluptatum distinctio consequatur inventore, ex beatae veniam sint error nam. Alias eos autem culpa incidunt at accusamus vero veritatis odio? Maiores consequatur eius totam soluta corporis fugiat!</p>
+            <button>Tovább az oldalra<mat-icon>desktop_windows</mat-icon></button>
+          </div>
+        </div>
+        <img src="/projects/mockup.png" alt="Website Mockup">
+      </div>
+      <div class="reference from-left" appObserve>
+        <img src="/projects/mockup.png" alt="Website Mockup">
+        <div class="reference-description">
+          <div class="box-shadow">
+            <h5>Weboldal neve</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus amet odit provident temporibus nostrum illo laborum, quas deserunt assumenda similique natus, voluptatem commodi voluptatum distinctio consequatur inventore, ex beatae veniam sint error nam. Alias eos autem culpa incidunt at accusamus vero veritatis odio? Maiores consequatur eius totam soluta corporis fugiat!</p>
+            <button>Tovább az oldalra<mat-icon>desktop_windows</mat-icon></button>
+          </div>
+        </div>
+      </div>
+      <div class="reference from-right" appObserve>
+        <div class="reference-description">
+          <div class="box-shadow">
+            <h5>Weboldal neve</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus amet odit provident temporibus nostrum illo laborum, quas deserunt assumenda similique natus, voluptatem commodi voluptatum distinctio consequatur inventore, ex beatae veniam sint error nam. Alias eos autem culpa incidunt at accusamus vero veritatis odio? Maiores consequatur eius totam soluta corporis fugiat!</p>
+            <button>Tovább az oldalra<mat-icon>desktop_windows</mat-icon></button>
+          </div>
+        </div>
+        <img src="/projects/mockup.png" alt="Website Mockup">
+      </div>
+    </div>
+
+    <div class="aboutme my-3 opacity-50">
+      "A célom, hogy segítsek neked egy olyan online jelenlétet létrehozni,
+      amely igazán tükrözi a vállalkozásodat vagy ötletedet, és amely
+      hatékonyan kommunikál a célcsoportoddal.
+      A weboldal nemcsak egy digitális névjegykártya, hanem egy
+      erőteljes eszköz is, amellyel kapcsolatba léphetsz a közönségeddel, és
+      bizalmat építhetsz ki. Éppen ezért fontos, hogy a weboldalad ne csak
+      esztétikus legyen, hanem jól működjön minden eszközön és minden
+      helyzetben.
+      Legyen szó egyszerű bemutatkozó oldalról vagy komplex,
+      dinamikus alkalmazásokról, a legmagasabb minőségben és a
+      legjobb megoldásokkal támogatom a sikered."
+    </div>
+
+  </div>
+
+
+
+
+  <!-- Contact Section -->
   <div id="contact-id"></div>
 
   <div id="contact-container">
     <div class="image-container">
-      <img class="avatar-image" src="/images/mail-sent.png" alt="email-icon" />
+      <img class="avatar-image" src="/images/email-icon.png" alt="email-icon" />
     </div>
-    <div id="contact-header" class="hidden" appObserve>
-      <h3><span>Érdekel?</span><br>Küldj üzenetet</h3>
+    <div id="contact-header">
+      <!-- <h3>Kapcsolati<span> űrlap</span></h3>    -->
       <p>
-        <span>Kérdéseid vannak, vagy ötleteid, amiket megosztanál?</span> Lépj kapcsolatba velem, és tedd meg az első lépést az online jelenlétedhez!
+        <span>Kérdéseid vannak, vagy ötleteid, amiket megosztanál?</span><br>Írj egy e-mailt és 1 órán belül válaszolok rá!
       </p>
     </div>
     <div id="form-content" class="hidden" appObserve>
@@ -336,28 +327,40 @@
       </button>
     </div>
 
-    <div id="footer-section">
-      <div id="footer-links">
-        <div>
-          <a href="https://discord.com/users/384814210829516810" target="_blank"
-            ><i class="bi bi-discord"></i
-          ></a>
-          <a href="https://www.linkedin.com/in/roland-rokszin/" target="_blank"
-            ><i class="bi bi-linkedin"></i
-          ></a>
-          <a href="https://github.com/Vestels" target="_blank"
-            ><i class="bi bi-github"></i
-          ></a>
-        </div>
-        <div class="agreements">
-          <a [routerLink]="['/weboldal-keszites/terms-and-conditions']">ÁSZF</a>
-          <a [routerLink]="['/weboldal-keszites/privacy-policy']">Adatvédelmi Szabályzat</a>
-          <a [routerLink]="['/weboldal-keszites/impressum']">Impresszum</a>
-        </div>
+
+    <!-- Footer Section -->
+    <div class="footer d-flex flex-column gap-5 align-items-center justify-content-center">
+      <div class="d-flex gap-5 flex-column flex-md-row">
+          <div class="d-flex flex-column align-items-start gap-2">
+            <span>Hasznos</span>
+            <a [routerLink]="['/weboldal-keszites/terms-and-conditions']">ÁSZF</a>
+            <a [routerLink]="['/weboldal-keszites/impressum']">Impresszum</a>
+            <a [routerLink]="['/weboldal-keszites/privacy-policy']">Adatvédelmi Szabályzat</a>
+          </div>
+          <div class="d-flex flex-column align-items-start gap-2">
+            <span>Linkek</span>
+            <a class="me-1" (click)="scrollToElement('hero')">Főoldal</a>
+            <a class="me-1" (click)="scrollToElement('services-id')">Szolgáltatások</a>
+            <a class="me-1" (click)="scrollToElement('reference-id')">Referenciák</a>
+            <a class="me-1" (click)="scrollToElement('contact-id')">Kapcsolat</a>
+          </div>
+          <div class="d-flex gap-2 flex-column align-items-start">
+            <span>Egyéb</span>
+            <a href="https://discord.com/users/384814210829516810" target="_blank"
+              ><i class="bi bi-discord"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/roland-rokszin/" target="_blank"
+              ><i class="bi bi-linkedin"></i
+            ></a>
+            <a href="https://github.com/Vestels" target="_blank"
+              ><i class="bi bi-github"></i
+            ></a>
+          </div>
       </div>
-      <div id="email">rokszinroland&#64;gmail.com</div>
       Copyright &copy; 2025. Minden jog fenntartva.
       | rokszinroland.hu
     </div>
   </div>
+
+  
 </div>
