@@ -9,6 +9,7 @@ import { PrivacypolicyComponent } from './privacypolicy/privacypolicy.component'
 import { ImpressumComponent } from './impressum/impressum.component';
 import { HomeComponent } from './home/home.component';
 import { TermsComponent } from './terms/terms.component';
+import { HttpClientModule } from '@angular/common/http';
 
 //Angular-Materials
 import { MatIconModule } from '@angular/material/icon';
@@ -35,6 +36,7 @@ import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
     BrowserModule,
     AppRoutingModule,
     RouterModule,
+    HttpClientModule,
 
     //Angular-materials
     MatIconModule,

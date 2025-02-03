@@ -3,6 +3,10 @@ public/index.html
 .firebaserc
 firebase.json
 copy.scss
+/src/environtments
+/api/node_modules
+/api/.env
+
 # Compiled output
 /dist
 /tmp

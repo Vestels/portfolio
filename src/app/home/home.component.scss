@@ -9,27 +9,6 @@ $secondary-container: #1c1f1f;
   width: 100%;
 }
 
-.contact-top {
-  background-color: $main-color;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  color: $text-color;
-
-  span {
-    a {
-      display: flex;
-      align-items: center;
-      gap: .5rem;
-      color: $text-color;
-    }
-  }
-
-  div {
-    text-transform: uppercase;
-  }
-}
-
 #page-up-arrow {
   position: fixed;
   bottom: 20px;
@@ -46,8 +25,8 @@ $secondary-container: #1c1f1f;
 }
 
 .avatar-image {
-  height: 150px;
-  border-radius: 100%;
+  height: 80px;
+  filter: invert(100%);
 }
 
 @media screen and (max-width: 1000px) {
@@ -111,7 +90,7 @@ $secondary-container: #1c1f1f;
   color: $main-color;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
-  letter-spacing: 5px;
+  letter-spacing: 4px;
 }
 
 mat-nav-list {
@@ -151,7 +130,6 @@ mat-nav-list {
   #hero-content-left {
 
     h1 {
-      text-align: center;
       font-size: 2.5rem;
       display: flex;
       margin: 0;
@@ -160,14 +138,12 @@ mat-nav-list {
     }
 
     h2 {
-      text-align: center;
       font-size: 2rem;
       width: 100%;
     }
 
     h3 {
       width: 100%;
-      text-align: center;
       font-size: 1.2rem;
     }
   }
@@ -182,7 +158,7 @@ mat-nav-list {
 
 .arrow-scroll {
   position: fixed;
-  bottom: 6rem;
+  bottom: 8rem;
   right: 50%;
   height: 3em;
   z-index: 999;
@@ -272,6 +248,7 @@ mat-nav-list {
 #hero-content-left > h3 {
   font-family: "Montserrat", sans-serif;
   margin: 0;
+  line-height: normal;
 }
 
 .hero-list {
@@ -336,8 +313,8 @@ mat-nav-list {
   animation: liquid 5s ease-in-out infinite;
 
   img {
-    width: 500px;
-    margin-bottom: 3rem;
+    width: 110px;
+    filter: invert(100%);
   }
 }
 
@@ -704,7 +681,7 @@ mat-nav-list {
         }
         
         button:hover {
-          color: #000;
+          color: $main-color;
         }
         
         button::before {
@@ -714,7 +691,7 @@ mat-nav-list {
           left: 0;
           width: 100%;
           height: 100%;
-          background-color: $text-color;
+          background-color: #fff;
           transition: transform 0.4s ease;
           transform: scaleX(0);
           transform-origin: bottom right;
@@ -735,6 +712,33 @@ mat-nav-list {
 
   .aboutme {
     width: 60%;
+    font-style: italic;
+  }
+
+  .prices {
+
+    .pack {
+      min-width: 30%;
+      background-color: rgba($color: $main-color, $alpha: 0.1);
+
+      .header {
+
+        h3 {
+          text-transform: uppercase;
+
+          strong {
+            color: $main-color;
+          }
+        }
+      }
+
+      ul {
+
+        li::marker {
+          color: $main-color;
+        }
+      }
+    }
   }
 }
 
@@ -785,36 +789,81 @@ mat-nav-list {
   font-weight: bold;
 }
 
-#form-content {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 10rem;
-}
-#form-content > mat-form-field {
-  width: 30%;
-}
-#form-content > button {
-  background-color: $main-color;
-  color: $text-color;
-}
-#form-content > img {
-  position: fixed;
-  bottom: -10%;
-  height: 20%;
-}
 
-textarea {
-  resize: none;
-}
 
+form {
+  mat-form-field {
+    width: 30%;
+
+    textarea {
+      resize: none;
+    }
+  }
+
+}
 
 .footer {
   a {
     color: $main-color;
     cursor: pointer;
+  }
+}
+
+.ratings {
+
+  .rating {
+    max-width: 400px;
+
+    .image {
+      width: 80px;
+      height: 80px;
+      border-radius: 100%;
+      overflow: hidden;
+      background-color: $main-color;
+
+      img {
+        width: 50px;
+        filter: invert(100%);
+      }
+    }
+
+    .stars {
+      
+      mat-icon {
+        color: rgb(255, 255, 78);
+      }
+    }
+  }
+}
+
+.message {
+  width: 100%;
+  min-height: 60px;
+  background-color: $main-color;
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: alert .5s;
+  transition: all .5s;
+}
+
+@keyframes alert {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(-15%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
   }
 }
