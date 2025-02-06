@@ -4,11 +4,10 @@ const nodemailer = require('nodemailer');
 require('dotenv').config()
 
 const corsOptions = {
-    origin: '*',
+    origin: 'https://rokszinroland.hu',
   };
 
 const app = express();
-const port = 3000;
 
 app.use(cors(corsOptions));
 app.use(express.json());
@@ -45,10 +44,12 @@ app.post('/send-email', (req, res, next) => {
 });
 
 app.use((err, req, res, next) => {
+  if (err instanceof SyntaxError && err.status === 400 && 'body' in err) {
+    return res.status(400).send('Hibás JSON.');
+  }
   console.error('Hiba történt:', err.message);
   res.status(500).send('Hiba történt az e-mail küldése közben.');
 });
 
-app.listen(port, () => {
-  console.log(`Server is running.`);
-});
+
+module.exports = app;
