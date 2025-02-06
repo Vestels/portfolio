@@ -37,17 +37,29 @@
 
 
   <!-- Scrollable feedback -->
-  <div *ngIf="scrollIsVisible" class="arrow-scroll delayed">
+  <!-- <div *ngIf="scrollIsVisible" class="arrow-scroll delayed">
     <div class="arrow"></div>
     <div class="arrow"></div>
     <div class="arrow"></div>
-  </div>
+  </div> -->
 
 
 
 
   <!-- Hero section -->
   <div id="hero">
+
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="2500" height="200" preserveAspectRatio="none" viewBox="0 0 2500 200">
+      <g mask="url(&quot;#SvgjsMask1024&quot;)" fill="none">
+          <path d="M 0,72 C 125,64 375,28.6 625,32 C 875,35.4 1000,87.8 1250,89 C 1500,90.2 1625,45.2 1875,38 C 2125,30.8 2375,50 2500,53L2500 200L0 200z" fill="rgba(5, 115, 115, 1)"></path>
+          <path d="M 0,164 C 83.4,160.2 250.2,144.4 417,145 C 583.8,145.6 667.2,174.8 834,167 C 1000.8,159.2 1084.2,106 1251,106 C 1417.8,106 1501.2,160.6 1668,167 C 1834.8,173.4 1918.6,132.8 2085,138 C 2251.4,143.2 2417,182 2500,193L2500 200L0 200z" fill="rgba(7, 165, 165, 1)"></path>
+      </g>
+      <defs>
+          <mask id="SvgjsMask1024">
+              <rect width="2500" height="200" fill="#ffffff"></rect>
+          </mask>
+      </defs>
+    </svg>
 
       <div id="hero-content-left">
         <h1 class="from-left" appObserve>
@@ -96,6 +108,8 @@
   <div id="services-id"></div>
 
   <div id="services-container">
+
+
 
     <div class="image-container">
       <img class="avatar-image" src="/images/services.png" alt="Services Logo" />
@@ -187,6 +201,7 @@
   <div id="reference-id"></div>
 
   <div id="reference-container">
+
     <div class="reference-content">
       <div class="reference hidden" appObserve>
         <img src="/projects/mockup.png" alt="Website Mockup">
