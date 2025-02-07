@@ -3,7 +3,6 @@ $secondary-color: #00a8e8;
 $text-color: #fff;
 $secondary-container: #1c1f1f;
 
-
 #container {
   min-height: 100vh;
   width: 100%;
@@ -43,7 +42,7 @@ $secondary-container: #1c1f1f;
 
 #nav-element {
   height: 70px;
-  position: sticky;
+  position: absolute;
   z-index: 999;
   top: 0;
   overflow: hidden;
@@ -51,7 +50,7 @@ $secondary-container: #1c1f1f;
   align-items: center;
   justify-content: space-evenly;
   padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.8);
+  // background-color: rgba($color: #000000, $alpha: .1);
   backdrop-filter: blur(5px);
   width: 100%;
 }
@@ -59,6 +58,7 @@ $secondary-container: #1c1f1f;
 #hamburger-menu {
   display: none;
   cursor: pointer;
+  color: $main-color;
 }
 
 #nav-logo {
@@ -84,6 +84,7 @@ $secondary-container: #1c1f1f;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
+  color: $text-color;
 }
 
 #nav-buttons > button {
@@ -94,48 +95,23 @@ $secondary-container: #1c1f1f;
 }
 
 mat-nav-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  gap: 2rem;
-
   button {
     color: $main-color;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
   }
+
 }
 
-.nav-list-button {
-  font-family: "Montserrat", sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-}
-
-@media screen and (max-width: 1530px) {
-  #hero {
-    padding-top: 3rem;
-    flex-direction: column;
-    gap: 2rem;
-  }
+@media screen and (min-width: 992px) {
   #hero-content-left {
-    padding-bottom: 0 !important;
-    width: 90% !important;
-  }
-  #hero-socials {
-    position: static !important;
-  }
-
-  #hero {
-    svg {
-      height: 230px;
-    }
+    width: 50% !important;
   }
 }
 
 @media screen and (max-width: 650px) {
   #hero-content-left {
-    margin-bottom: 0 !important;
     h1 {
       font-size: 2.5rem;
       display: flex;
@@ -161,6 +137,15 @@ mat-nav-list {
   .hero-list {
     width: 100% !important;
   }
+
+  #blob {
+    width: 130px !important;
+    height: 130px !important;
+
+    img {
+      width: 80px !important;
+    }
+  }
 }
 
 .arrow-scroll {
@@ -174,6 +159,10 @@ mat-nav-list {
 @media screen and (max-width: 900px) {
   .arrow-scroll {
     bottom: 3rem;
+  }
+
+  .hero-image {
+    width: 900px !important;
   }
 }
 
@@ -223,14 +212,37 @@ mat-nav-list {
 
 #hero {
   position: relative;
-  padding-bottom: 6rem;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   overflow: hidden;
+  color: $text-color;
+
+  .grade-color {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+    backdrop-filter: blur(3px);
+  }
+
+  .hero-image {
+    width: 2000px;
+    height: 1000px;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    background-image: url('/images/hero.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
 
   svg {
+    display: none;
     position: absolute;
     bottom: 0;
     z-index: 0;
@@ -238,14 +250,6 @@ mat-nav-list {
   }
 }
 
-#hero-content-left {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  width: 40%;
-  padding-bottom: 5rem;
-}
 #hero-content-left > h1 {
   display: flex;
   flex-direction: column;
@@ -282,38 +286,6 @@ mat-nav-list {
   }
 }
 
-#hero-bottom-section {
-  font-weight: bold;
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-@media screen and (max-width: 375px) {
-  #hero-bottom-section {
-    width: 100%;
-    justify-content: center;
-    align-items: start;
-    gap: 3rem;
-  }
-}
-
-.bottom-element {
-  border-radius: 10px 10px 10px 10px;
-  background-color: rgba(16, 20, 20, 0.5);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-#hero-content-right {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 3rem;
-}
-
 #blob {
   overflow: hidden;
   position: relative;
@@ -333,11 +305,6 @@ mat-nav-list {
   }
 }
 
-#hero-avatar {
-  position: absolute;
-  width: 100%;
-}
-
 @keyframes liquid {
   0% {
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
@@ -353,13 +320,6 @@ mat-nav-list {
   }
 }
 
-#hero-socials {
-  display: flex;
-  position: absolute;
-  bottom: 5rem;
-  justify-content: space-between;
-  gap: 2rem;
-}
 #hero-socials > a {
   color: #fff;
   transition: all 0.3s ease-in-out;
@@ -509,232 +469,80 @@ mat-nav-list {
 }
 
 @media screen and (max-width: 1400px) {
-  .reference-content {
-
-    .reference {
-      min-width: 100% !important;
-      flex-direction: column;
-      gap: 2rem !important;
-
-      &:nth-child(2n) {
-        flex-direction: column-reverse;
-        gap: 0;
-      }
-
-      .reference-description {
-        width: 90% !important;
-      }
-    }
-  }
-
   mat-form-field {
     width: 50% !important;
   }
 }
 
 @media screen and (max-width: 902px) {
+  .reference-content {
+    width: 100% !important;
+  }
   #reference-container {
     height: auto;
   }
 }
 
 @media screen and (max-width: 700px) {
-  .reference-content {
-    // gap: 0 !important;
+  .aboutme {
 
-    .reference {
-
-      img {
-        transform: none !important;
-        width: 500px !important;
-      }
-
-      .reference-description {
-
-        .box-shadow {
-          top: 2rem !important;
-          left: 1.5rem !important;
-          gap: 1rem;
-
-          p {
-            font-size: .9rem !important;
-          }
-
-          button {
-            font-size: .9rem !important;
-          }
-        }
-      }
+    p {
+      width: 90% !important;
+      font-size: .8rem !important;
     }
-  }
-
-  .aboutme {
-    width: 90% !important;
-    font-size: .8rem !important;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .reference-content{
-    gap: 3rem !important;
-
-    .reference {
-      padding: .8rem !important;
-
-      .box-shadow {
-        padding: 1rem !important;
-      }
-      img{
-        width: 300px !important;
-      }
-
-      button {
-        width: auto !important;
-      }
-    }
-  }
-
-  .aboutme {
-    margin-top: 8rem !important;
-  }
-}
-
-@media screen and (max-width: 340px) {
-  .reference-content{
-    gap: 8rem !important;
-  }
-
-  .aboutme {
-    margin-top: 12rem !important;
+    
   }
 }
 
 #reference-container {
   position: relative;
   min-height: 100vh;
-  padding-bottom: 5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  background-color: #fff;
   overflow: hidden;
+  backdrop-filter: blur(10px);
+  // background-color: #fff;
 
   .reference-content {
-    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-wrap: wrap;
 
-    .reference {
-      background-color: rgba($color: $main-color, $alpha: .1);
-      padding: 2rem;
-      margin-top: 5rem;
-      margin-bottom: 5rem;
-      height: 100%;
-      min-width: 80%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8rem;
+    .ref-card {
+      width: 300px;
+      height: 300px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      background-image: url('/projects/web-mockup.jpg');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: center;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all .5s ease;
 
       &:hover {
-        img {
-          transform: scale(1.1) translateX(15%) translateY(-10%);
-        }
-      }
-
-      h5 {
-        font-family: "Montserrat", sans-serif;
-        font-weight: bold;
-        text-transform: capitalize;
-      }
-
-      img {
-        width: 500px;
-        transition: all .5s;
-      }
-
-      .reference-description {
-        position: relative;
-        z-index: 1;
-        left: -1rem;
-        min-height: 400px;
-        width: 80%;
-        background-color: rgba($color: $main-color, $alpha: .1);
-
-        .box-shadow {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-evenly;
-          position: absolute;
-          top: 3rem;
-          left: 3rem;
-          min-height: 100%;
-          width: 100%;
-          padding: 2rem;
-          background-color: rgba($color: $main-color, $alpha: .2);
-          border: 5px solid $main-color;
-        }
-
-        button {
-          display: flex;
-          align-items: center;
-          justify-content: space-evenly;
-          gap: 1rem;
-          background-color: $main-color;
-          outline: none;
-          padding: 1rem;
-          text-transform: uppercase;
-          border: 5px solid $main-color;
-          cursor: pointer;
-          overflow: hidden;
-          position: relative;
-          transition: color 0.4s ease;
-          z-index: 1;
-          width: 300px;
-          color: $text-color;
-        }
-        
-        button:hover {
-          color: $main-color;
-        }
-        
-        button::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background-color: #fff;
-          transition: transform 0.4s ease;
-          transform: scaleX(0);
-          transform-origin: bottom right;
-          z-index: -1;
-        }
-        
-        button:hover::before {
-          transform: scaleX(1);
-          transform-origin: bottom left;
-        }
-
-        p {
-          width: 90%;
-        }
+        background-size: 130%;
       }
     }
   }
+}
 
-  .aboutme {
+.aboutme {
+  position: relative;
+  font-style: italic;
+  background-color: #fff;
+
+  p {
     width: 60%;
-    font-style: italic;
   }
+}
 
   .prices {
+    background-color: $secondary-container;
+    color: $text-color;
 
     .pack {
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
       min-width: 30%;
       background-color: rgba($color: $main-color, $alpha: 0.1);
 
@@ -757,7 +565,7 @@ mat-nav-list {
       }
     }
   }
-}
+
 
 @media screen and (max-width: 550px) {
   mat-form-field {
@@ -819,6 +627,8 @@ form {
 }
 
 .footer {
+  background-color: #fff;
+  color: #000;
   a {
     color: $main-color;
     cursor: pointer;

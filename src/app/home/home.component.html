@@ -47,7 +47,10 @@
 
 
   <!-- Hero section -->
-  <div id="hero">
+  <div id="hero" class="d-flex flex-column align-items-center justify-content-center gap-5">
+
+    <div class="grade-color"></div>
+    <div class="hero-image"></div>
 
     <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="2500" height="200" preserveAspectRatio="none" viewBox="0 0 2500 200">
       <g mask="url(&quot;#SvgjsMask1024&quot;)" fill="none">
@@ -61,32 +64,35 @@
       </defs>
     </svg>
 
-      <div id="hero-content-left">
+    <div class="d-flex flex-column flex-lg-row w-100 align-items-center justify-content-center mt-5 pt-5">
+      <div id="hero-content-left" class="d-flex flex-column align-items-start justify-content-center w-100 px-4 mt-5">
         <h1 class="from-left" appObserve>
           Professzionális Weboldalak
         </h1>
         <h2 class="from-left" appObserve>Egyedi Megoldások</h2>
         <h3 class="from-left" appObserve>Modern Technológiás Weboldal készítés</h3>
         <div class="hero-list">
-          <div class="list-element hidden" appObserve>
+          <div class="list-element hero-hidden" appObserve>
             <mat-icon>fingerprint</mat-icon><strong>Hiteles online jelenlét</strong> – Egy professzionális weboldal erősíti a márkád hitelességét, bizalmat épít, és versenyelőnyt biztosít a digitális térben.
           </div>
-          <div class="list-element hidden" appObserve>
+          <div class="list-element hero-hidden" appObserve>
             <mat-icon>trending_up</mat-icon><strong>Marketing és növekedési lehetőségek</strong> – A keresőoptimalizálás (SEO) és a digitális marketing eszközeivel új ügyfelekhez juthatsz, növelheted láthatóságodat és hosszú távon is skálázhatod vállalkozásodat.
           </div>
-          <div class="list-element hidden" appObserve>
+          <div class="list-element hero-hidden" appObserve>
             <mat-icon>speed</mat-icon><strong>Modern technológiák és optimalizált teljesítmény</strong> – Reszponzív, gyors és biztonságos weboldalak a legújabb fejlesztési eszközökkel, hogy mindig naprakész és versenyképes maradj.
           </div>
         </div>
       </div>
   
-      <div id="hero-content-right" class="from-right" appObserve>
+      <div id="hero-content-right" class="from-right d-flex h-100 align-items-center justify-content-center" appObserve>
         <div id="blob">
           <img src="/images/website.png" alt="Website Logo">
         </div>
       </div>
+    </div>
+
     
-    <div id="hero-socials" class="hidden" appObserve>
+    <div id="hero-socials" class="hidden d-flex gap-4 mb-5 pb-5" appObserve>
       <a href="https://discord.com/users/384814210829516810" target="_blank"
         ><i class="bi bi-discord"></i
       ></a>
@@ -200,69 +206,22 @@
   <!-- References Section -->
   <div id="reference-id"></div>
 
-  <div id="reference-container">
+  <div id="reference-container" class="d-flex flex-column align-items-center justify-content-center">
 
-    <div class="reference-content">
-      <div class="reference hidden" appObserve>
-        <img src="/projects/mockup.png" alt="Website Mockup">
-        <div class="reference-description">
-          <div class="box-shadow">
-            <h5>Weboldal neve</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus amet odit provident temporibus nostrum illo laborum, quas deserunt assumenda similique natus, voluptatem commodi voluptatum distinctio consequatur inventore, ex beatae veniam sint error nam. Alias eos autem culpa incidunt at accusamus vero veritatis odio? Maiores consequatur eius totam soluta corporis fugiat!</p>
-            <button>Tovább az oldalra<mat-icon>desktop_windows</mat-icon></button>
-          </div>
-        </div>
-      </div>
-      <div class="reference hidden" appObserve>
-        <div class="reference-description">
-          <div class="box-shadow">
-            <h5>Weboldal neve</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus amet odit provident temporibus nostrum illo laborum, quas deserunt assumenda similique natus, voluptatem commodi voluptatum distinctio consequatur inventore, ex beatae veniam sint error nam. Alias eos autem culpa incidunt at accusamus vero veritatis odio? Maiores consequatur eius totam soluta corporis fugiat!</p>
-            <button>Tovább az oldalra<mat-icon>desktop_windows</mat-icon></button>
-          </div>
-        </div>
-        <img src="/projects/mockup.png" alt="Website Mockup">
-      </div>
-      <div class="reference hidden" appObserve>
-        <img src="/projects/mockup.png" alt="Website Mockup">
-        <div class="reference-description">
-          <div class="box-shadow">
-            <h5>Weboldal neve</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus amet odit provident temporibus nostrum illo laborum, quas deserunt assumenda similique natus, voluptatem commodi voluptatum distinctio consequatur inventore, ex beatae veniam sint error nam. Alias eos autem culpa incidunt at accusamus vero veritatis odio? Maiores consequatur eius totam soluta corporis fugiat!</p>
-            <button>Tovább az oldalra<mat-icon>desktop_windows</mat-icon></button>
-          </div>
-        </div>
-      </div>
-      <div class="reference hidden" appObserve>
-        <div class="reference-description">
-          <div class="box-shadow">
-            <h5>Weboldal neve</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus amet odit provident temporibus nostrum illo laborum, quas deserunt assumenda similique natus, voluptatem commodi voluptatum distinctio consequatur inventore, ex beatae veniam sint error nam. Alias eos autem culpa incidunt at accusamus vero veritatis odio? Maiores consequatur eius totam soluta corporis fugiat!</p>
-            <button>Tovább az oldalra<mat-icon>desktop_windows</mat-icon></button>
-          </div>
-        </div>
-        <img src="/projects/mockup.png" alt="Website Mockup">
-      </div>
+    <div class="reference-content w-100 h-100 d-flex flex-row align-items-center justify-content-evenly px-lg-5 gap-5 m-5">
+
+      <div class="ref-card rounded hidden" appObserve></div>
+      <div class="ref-card rounded hidden" appObserve></div>
+      <div class="ref-card rounded hidden" appObserve></div>
+      <div class="ref-card rounded hidden" appObserve></div>
+      <div class="ref-card rounded hidden" appObserve></div>
+
     </div>
 
-    <div class="aboutme my-5 opacity-50">
-      "Segítek neked egy olyan online jelenlétet létrehozni,
-      amely igazán tükrözi a vállalkozásodat vagy ötletedet, és amely
-      hatékonyan kommunikál a célcsoportoddal.
-      A weboldal nemcsak egy digitális névjegykártya, hanem egy
-      erőteljes eszköz is, amellyel kapcsolatba léphetsz a közönségeddel, és
-      bizalmat építhetsz ki. Éppen ezért fontos, hogy a weboldalad ne csak
-      esztétikus legyen, hanem jól működjön minden eszközön és minden
-      helyzetben.
-      Legyen szó egyszerű bemutatkozó oldalról vagy komplex,
-      dinamikus alkalmazásokról, a legmagasabb minőségben és a
-      legjobb megoldásokkal támogatom a sikered.
-      100%-ban személyre szabott, teljesen leprogramozott weboldalt kapsz, 
-      CMS és egyéb low/no-code eszközök nélkül, így egyediséged maximálisan érvényesül, 
-      és a weboldalad teljes mértékben a te igényeidhez igazodik."
-    </div>
 
-    <div class="prices w-100 mt-5 p-0 p-xxl-5 d-flex flex-column flex-lg-row gap-5 justify-content-center">
+
+
+    <div class="prices w-100 mt-5 py-5 p-xxl-5 d-flex flex-column flex-lg-row gap-5 justify-content-center">
       <div class="pack p-4">
         <div class="header w-100 border-bottom">
           <h3><strong>Express</strong> csomag</h3>
@@ -313,7 +272,26 @@
         </ul>
       </div>
     </div>
+  </div>
 
+
+  <div class="aboutme d-flex align-items-center justify-content-center py-5">
+    <p class="opacity-50 my-5">
+      "Segítek neked egy olyan online jelenlétet létrehozni,
+      amely igazán tükrözi a vállalkozásodat vagy ötletedet, és amely
+      hatékonyan kommunikál a célcsoportoddal.
+      A weboldal nemcsak egy digitális névjegykártya, hanem egy
+      erőteljes eszköz is, amellyel kapcsolatba léphetsz a közönségeddel, és
+      bizalmat építhetsz ki. Éppen ezért fontos, hogy a weboldalad ne csak
+      esztétikus legyen, hanem jól működjön minden eszközön és minden
+      helyzetben.
+      Legyen szó egyszerű bemutatkozó oldalról vagy komplex,
+      dinamikus alkalmazásokról, a legmagasabb minőségben és a
+      legjobb megoldásokkal támogatom a sikered.
+      100%-ban személyre szabott, teljesen leprogramozott weboldalt kapsz, 
+      CMS és egyéb low/no-code eszközök nélkül, így egyediséged maximálisan érvényesül, 
+      és a weboldalad teljes mértékben a te igényeidhez igazodik."
+    </p>
   </div>
 
 
@@ -329,10 +307,10 @@
     <div id="contact-header">
       <!-- <h3>Kapcsolati<span> űrlap</span></h3>    -->
       <p>
-        <span>Kérdéseid vannak, vagy ötleteid, amiket megosztanál?</span><br>Írj egy e-mailt és 1 órán belül válaszolok rá!
+        <span>Kérdéseid vannak, vagy ötleteid, amiket megosztanál?</span><br>Írj egy e-mailt és még aznap válaszolok rá!
       </p>
     </div>
-      <form class="mb-5 d-flex flex-column align-items-center w-100 gap-3" #formDirective="ngForm" [formGroup]="contactForm" (ngSubmit)="onSendEmail($event)">
+      <form class="mb-5 d-flex flex-column align-items-center w-100 gap-3 hidden" appObserve #formDirective="ngForm" [formGroup]="contactForm" (ngSubmit)="onSendEmail($event)">
         <mat-form-field appearance="outline">
           <mat-label>E-mail</mat-label>
           <input
@@ -374,7 +352,7 @@
 
 
       <div class="ratings p-4 d-flex flex-column flex-lg-row gap-5 my-5 align-items-center justify-content-center">
-        <div class="rating w-100 h-100 rounded p-3 gap-4 d-flex flex-column align-items-center justify-content-between">
+        <div class="rating w-100 h-100 rounded p-3 gap-4 d-flex flex-column align-items-center justify-content-between hidden" appObserve>
           <div class="header d-flex flex-column align-items-center gap-2">
             <div class="image rounded-circle d-flex align-items-center justify-content-center"><img src="/ratings/customer.png" alt="Client Image"></div>
             <span>Barátságos Ügyfél</span>
@@ -382,7 +360,7 @@
           </div>
           <p class="opacity-75">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab odit repellendus ad eius unde autem nam, doloremque animi dignissimos ea sequi accusamus enim minima natus nobis, beatae assumenda? Ipsam, esse fugit perspiciatis officiis eaque, commodi voluptatibus vero aliquam odit et dolore at harum recusandae nobis."</p>
         </div>
-        <div class="rating w-100 h-100 rounded p-3 gap-4 d-flex flex-column align-items-center justify-content-between">
+        <div class="rating w-100 h-100 rounded p-3 gap-4 d-flex flex-column align-items-center justify-content-between hidden" appObserve>
           <div class="header d-flex flex-column align-items-center gap-2">
             <div class="image rounded-circle d-flex align-items-center justify-content-center"><img src="/ratings/customer.png" alt="Client Image"></div>
             <span>Kevésbé Barátságos Ügyfél</span>
@@ -390,7 +368,7 @@
           </div>
           <p class="opacity-75">"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt molestiae reprehenderit a necessitatibus et quod unde rerum atque vero dignissimos, nihil culpa exercitationem commodi inventore facere similique sed voluptatum ex. Labore, amet laborum deserunt asperiores recusandae molestiae fuga."</p>
         </div>
-        <div class="rating w-100 h-100 rounded p-3 gap-4 d-flex flex-column align-items-center justify-content-between">
+        <div class="rating w-100 h-100 rounded p-3 gap-4 d-flex flex-column align-items-center justify-content-between hidden" appObserve>
           <div class="header d-flex flex-column align-items-center gap-2">
             <div class="image rounded-circle d-flex align-items-center justify-content-center"><img src="/ratings/customer.png" alt="Client Image"></div>
             <span>Barátságos Ügyfél</span>
@@ -402,8 +380,8 @@
 
 
     <!-- Footer Section -->
-    <div class="footer mt-5 d-flex flex-column gap-5 align-items-center justify-content-center">
-      <div class="d-flex gap-5 px-5 px-md-2 w-100 flex-column flex-md-row align-items-start">
+    <div class="footer mt-5 d-flex flex-column gap-5 align-items-center justify-content-center w-100 h-100 px-5 pt-5">
+      <div class="d-flex gap-5 px-5 px-md-2 w-100 flex-column flex-md-row align-items-start justify-content-center mb-4">
           <div class="d-flex flex-column align-items-start gap-2">
             <span>Hasznos</span>
             <a [routerLink]="['/weboldal-keszites/terms-and-conditions']">ÁSZF</a>

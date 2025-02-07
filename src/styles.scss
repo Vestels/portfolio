@@ -39,8 +39,13 @@ img {
 }
 
 .hidden {
+  transform: translateY(8%);
+  transition: all 1s ease;
+}
+
+.hero-hidden {
   opacity: 0;
-  transform: translateY(5%);
+  transform: translateY(8%);
   transition: all 1s ease;
 }
 
