@@ -64,35 +64,35 @@
       </defs>
     </svg>
 
-    <div class="d-flex flex-column flex-lg-row w-100 align-items-center justify-content-center mt-5 pt-5">
+    <div class="d-flex flex-column flex-lg-row w-100 align-items-center justify-content-center mt-5 pt-5 hidden" appObserve>
       <div id="hero-content-left" class="d-flex flex-column align-items-start justify-content-center w-100 px-4 mt-5">
-        <h1 class="hidden-up" appObserve>
+        <h1>
           Professzionális Weboldalak
         </h1>
-        <h2 class="hidden-left" appObserve>Egyedi Megoldások</h2>
-        <h3 class="hidden-left" appObserve>Modern Technológiás Weboldal készítés</h3>
+        <h2>Egyedi Megoldások</h2>
+        <h3>Modern Technológiás Weboldal készítés</h3>
         <div class="hero-list">
-          <div class="list-element ms-3 hidden-down" appObserve>
+          <div class="list-element ms-lg-3">
             <mat-icon>task_alt</mat-icon><strong>Hiteles online jelenlét</strong> – Egy professzionális weboldal erősíti a márkád hitelességét, bizalmat épít, és versenyelőnyt biztosít a digitális térben.
           </div>
-          <div class="list-element ms-3 hidden-down" appObserve>
+          <div class="list-element ms-lg-3">
             <mat-icon>task_alt</mat-icon><strong>Marketing és növekedési lehetőségek</strong> – A keresőoptimalizálás (SEO) és a digitális marketing eszközeivel új ügyfelekhez juthatsz, növelheted láthatóságodat és hosszú távon is skálázhatod vállalkozásodat.
           </div>
-          <div class="list-element ms-3 hidden-down" appObserve>
+          <div class="list-element ms-lg-3">
             <mat-icon>task_alt</mat-icon><strong>Modern technológiák és optimalizált teljesítmény</strong> – Reszponzív, gyors és biztonságos weboldalak a legújabb fejlesztési eszközökkel, hogy mindig naprakész és versenyképes maradj.
           </div>
         </div>
       </div>
   
-      <div id="hero-content-right" class="hidden-right d-flex h-100 align-items-center justify-content-center" appObserve>
-        <div id="blob">
+      <div id="hero-content-right" class="d-flex h-100 align-items-center justify-content-center">
+        <div id="blob" class="hidden" appObserve>
           <img src="/images/website.png" alt="Weboldal logó ikon">
         </div>
       </div>
     </div>
 
     
-    <div id="hero-socials" class="d-flex gap-4 mb-5 pb-5 hidden-down" appObserve>
+    <div id="hero-socials" class="d-flex gap-4 mb-5 pb-5 hidden" appObserve>
       <a href="https://discord.com/users/384814210829516810" target="_blank" title="Discord Link"
         ><i class="bi bi-discord"></i
       ></a>
@@ -125,7 +125,7 @@
 
     <!-- Services -->
     <div class="services">
-      <div class="service no-animation hidden-left" appObserve>
+      <div class="service">
         <div class="img-container">
           <img src="/services/web.png" alt="Weboldal ikon">
         </div>
@@ -134,7 +134,7 @@
           <p>Gyorsan betöltődő, stabil oldalak, amelyek részletesen ismertetik a kínált szolgáltatásokat, egyszerű navigációval és modern dizájnnal.</p>
         </article>
       </div>
-      <div class="service no-animation hidden-right" appObserve>
+      <div class="service">
         <div class="img-container">
           <img src="/services/creative-process.png" alt="Egyedi weboldal ikon">
         </div>
@@ -143,7 +143,7 @@
           <p>Teljesen testreszabott weboldalak, amelyek tökéletesen illeszkednek az igényeidhez és céljaidhoz, modern megjelenéssel és funkcionalitással.</p>
         </article>
       </div>
-      <div class="service no-animation hidden-left" appObserve>
+      <div class="service">
         <div class="img-container">
           <img src="/services/seo.png" alt="SEO ikon">
         </div>
@@ -152,7 +152,7 @@
           <p>A weboldalad keresőmotor-barát kialakítása, hogy könnyebben megtalálható legyen a Google-ben és más keresőkben, ezzel növelve a látogatók számát.</p>
         </article>
       </div>
-      <div class="service no-animation hidden-right" appObserve>
+      <div class="service">
         <div class="img-container">
           <img src="/services/responsive.png" alt="Reszponzivitás ikon">
         </div>
@@ -161,7 +161,7 @@
           <p>Reszponzív weboldalak, amelyek minden eszközön (telefonon, tableten és asztali gépen) tökéletes élményt nyújtanak a felhasználóknak.</p>
         </article>
       </div>
-      <div class="service no-animation hidden-left" appObserve>
+      <div class="service">
         <div class="img-container">
           <img src="/services/maintenance.png" alt="Karbantartás ikon">
         </div>
@@ -170,7 +170,7 @@
           <p>Rendszeres frissítések és hibajavítások, hogy a weboldalad mindig naprakész és biztonságos legyen.</p>
         </article>
       </div>
-      <div class="service no-animation hidden-right" appObserve>
+      <div class="service">
         <div class="img-container hidden-right" appObserve>
           <img src="/services/pie-chart.png" alt="Analitika ikon">
         </div>
@@ -179,7 +179,7 @@
           <p>Részletes látogatói statisztikák és felhasználói viselkedés elemzése, amelyek segítenek optimalizálni a weboldalt. Látogatók száma, forgalmi források, legnépszerűbb oldalak és interakciók nyomon követése a jobb felhasználói élmény érdekében.</p>
         </article>
       </div>
-      <div class="service no-animation hidden-left" appObserve>
+      <div class="service">
         <div class="img-container">
           <img src="/services/data-server.png" alt="Adat szerkezet ikon">
         </div>
@@ -188,7 +188,7 @@
           <p>Teljes körű támogatás a domain név regisztrációban és a tárhely kiválasztásában, hogy minden technikai részlet gördülékenyen megoldódjon.</p>
         </article>
       </div>
-      <div class="service no-animation hidden-right" appObserve>
+      <div class="service">
         <div class="img-container">
           <img src="/services/technology.png" alt="Szerkezeti ikon">
         </div>
@@ -344,42 +344,42 @@
 
     <div class="faq mb-5">
       <ul class="m-0 p-0 px-2">
-        <li class="border rounded p-2 d-flex flex-column">
+        <li class="border rounded p-2 d-flex flex-column hidden-up" appObserve>
           <input type="checkbox" name="faq" id="1">
           <label for="1" class="d-flex align-items-center gap-2"><mat-icon>expand_more</mat-icon>Mennyi idő alatt készül el egy weboldal?</label>
           <div class="text ms-4">
             <strong>A projekt időtartama az igényektől és a weboldal összetettségétől függ, általában 1–3 hét alatt valósítható meg.</strong>
           </div>
         </li>
-        <li class="border rounded p-2 d-flex flex-column">
+        <li class="border rounded p-2 d-flex flex-column hidden-up" appObserve>
           <input type="checkbox" name="faq" id="2">
           <label for="2" class="d-flex align-items-center gap-2"><mat-icon>expand_more</mat-icon>Milyen technológiákat alkalmazol?</label>
           <div class="text ms-4">
             <strong>Modern fejlesztési eszközöket és technológiákat használok, melyek lehetővé teszik a gyors, biztonságos és skálázható weboldalak elkészítését. A konkrét megoldások mindig a projekt egyedi igényeit tükrözik.</strong>
           </div>
         </li>
-        <li class="border rounded p-2 d-flex flex-column">
+        <li class="border rounded p-2 d-flex flex-column hidden-up" appObserve>
           <input type="checkbox" name="faq" id="3">
           <label for="3" class="d-flex align-items-center gap-2"><mat-icon>expand_more</mat-icon>Milyen támogatást nyújtasz a projekt átadása után?</label>
           <div class="text ms-4">
             <strong>Az átadás után is elérhető vagyok, legyen szó kisebb hibajavításról vagy hosszú távú karbantartásról. Célom, hogy a weboldalad folyamatosan megfeleljen az elvárásoknak.</strong>
           </div>
         </li>
-        <li class="border rounded p-2 d-flex flex-column">
+        <li class="border rounded p-2 d-flex flex-column hidden-up" appObserve>
           <input type="checkbox" name="faq" id="4">
           <label for="4" class="d-flex align-items-center gap-2"><mat-icon>expand_more</mat-icon>Hogyan zajlik az együttműködés?</label>
           <div class="text ms-4">
             <strong>Az első konzultáció során részletesen meghallgatom az elképzeléseidet. A projekt minden fázisában – a tervezéstől a fejlesztésen át a tesztelésig – folyamatos kommunikációt tartok fenn, hogy minden részlet megfeleljen az igényeidnek.</strong>
           </div>
         </li>
-        <li class="border rounded p-2 d-flex flex-column">
+        <li class="border rounded p-2 d-flex flex-column hidden-up" appObserve>
           <input type="checkbox" name="faq" id="5">
           <label for="5" class="d-flex align-items-center gap-2"><mat-icon>expand_more</mat-icon>Mit tartalmaz az ár?</label>
           <div class="text ms-4">
             <strong>Az ár a projekt teljes körű megoldását foglalja magában: az előzetes konzultációt, a részletes tervezést, a fejlesztést, a tesztelést, az átadást és az esetleges utólagos támogatást is. A végleges ajánlatot a projekt pontos specifikációi alapján dolgozom ki.</strong>
           </div>
         </li>
-        <li class="border rounded p-2 d-flex flex-column">
+        <li class="border rounded p-2 d-flex flex-column hidden-up" appObserve>
           <input type="checkbox" name="faq" id="6">
           <label for="6" class="d-flex align-items-center gap-2"><mat-icon>expand_more</mat-icon>Hogyan kezdődik el a projekt?</label>
           <div class="text ms-4">

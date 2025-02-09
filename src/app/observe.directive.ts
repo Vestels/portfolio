@@ -12,6 +12,7 @@ export class ObserveDirective implements OnInit {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           this.el.nativeElement.classList.add('show');
+          this.el.nativeElement.classList.add('no-delay');
           observer.unobserve(this.el.nativeElement);
         }
       });

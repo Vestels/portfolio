@@ -233,7 +233,7 @@ mat-nav-list {
 
   .hero-image {
     width: 2000px;
-    min-height: 100%;
+    height: 100vh;
     position: fixed;
     top: 0;
     z-index: -1;
@@ -250,6 +250,11 @@ mat-nav-list {
     z-index: 0;
     width: auto;
   }
+}
+
+#hero-content-left {
+  position: relative;
+  z-index: 1;
 }
 
 #hero-content-left > h1 {
@@ -331,6 +336,11 @@ mat-nav-list {
   }
 }
 
+#hero-socials {
+  position: relative;
+  z-index: 1;
+}
+
 #hero-socials > a {
   color: #fff;
   transition: all 0.3s ease-in-out;
@@ -351,13 +361,13 @@ mat-nav-list {
   padding-top: 5rem;
   padding-bottom: 8rem;
   text-align: center;
-  background-color: $secondary-container;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   color: $text-color;
+  background-color: $secondary-container;
 }
 
 #services-container > h3 {
@@ -393,6 +403,7 @@ mat-nav-list {
   padding-bottom: 1rem;
   gap: 2rem;
   flex: 1 1 700px;
+  transition: all .5s;
   min-height: 250px;
   background: rgb(7, 165, 165);
   background: linear-gradient(
@@ -522,7 +533,7 @@ mat-nav-list {
       }
   
       &:nth-child(7) {
-        transition-delay: 200ms !important;
+        transition-delay: 700ms !important;
       }
     }
   }
@@ -571,7 +582,7 @@ mat-nav-list {
   background: linear-gradient(0deg, rgba(0,0,0,0.4990371148459384) 0%, rgba(237,246,249,1) 50%, rgba(0,0,0,0.5046393557422969) 100%);
 
   .reference-content {
-    min-height: 600px;
+    min-height: 500px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -586,7 +597,7 @@ mat-nav-list {
       background-position: center;
       overflow: hidden;
       cursor: pointer;
-      transition: all 0.5s ease;
+      transition: all .5s ease !important;
 
       &:nth-child(2) {
         transition-delay: 200ms !important;
@@ -598,6 +609,7 @@ mat-nav-list {
 
       &:hover {
         background-size: 130%;
+        transition-delay: 0s !important;
       }
     }
   }
@@ -621,6 +633,27 @@ mat-nav-list {
     ul {
       li {
         list-style: none;
+
+        &:nth-child(2) {
+          transition-delay: 100ms;
+        }
+
+        &:nth-child(3) {
+          transition-delay: 200ms;
+        }
+
+        &:nth-child(4) {
+          transition-delay: 300ms;
+        }
+
+        &:nth-child(5) {
+          transition-delay: 400ms;
+        }
+
+        &:nth-child(6) {
+          transition-delay: 500ms;
+        }
+
 
         input {
           display: none;
@@ -702,13 +735,14 @@ mat-nav-list {
   position: relative;
   padding-top: 5rem;
   text-align: center;
-  background-color: $secondary-container;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
   color: $text-color;
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(28,31,31,1) 100%);
 }
 
 #contact-header {
